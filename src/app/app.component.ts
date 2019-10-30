@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
   ngOnInit() {
-   // localStorage.setItem('articleData', '');
+   localStorage.setItem('articleData', '');
    this.dataService.setDataToLocal();
   }
 }
