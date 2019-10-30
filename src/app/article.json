@@ -1,0 +1,78 @@
+[
+  {
+  "articleName": "Why Developer",
+  "articleId": "1",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "dislikes": [
+    {
+      "likesId": "1",
+      "author": "john"
+    },
+    {
+      "likesId": "2",
+      "author": "Jeddy"
+    }
+    ],
+    "imagepath": "src/images/noImage.jpg",
+    "comments": [
+      {
+        "commentsId": "1",
+        "description": "hello test",
+        "author": "john"
+      },
+      {
+        "commentsId": "2",
+        "description": "hello India",
+        "author": "Jeddy"
+      }
+    ],
+    "likes": [
+      {
+        "likesId": "1",
+        "author": "john"
+      },
+      {
+        "likesId": "2",
+        "author": "Jeddy"
+      }
+    ]
+  },
+  {
+  "articleName": "Developers Needv ssss",
+  "articleId": "2",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "dislikes": [
+      {
+        "likesId": "1",
+        "author": "john"
+      },
+      {
+        "likesId": "2",
+        "author": "Jeddy"
+      }
+    ],
+    "imagepath": "src/images/noImage.jpg",
+    "comments": [
+      {
+        "commentsId": "1",
+        "description": "hello test",
+        "author": "john"
+      },
+      {
+        "commentsId": "2",
+        "description": "hello India",
+        "author": "Jeddy"
+      }
+    ],
+    "likes": [
+      {
+        "likesId": "1",
+        "author": "john"
+      },
+      {
+        "likesId": "2",
+        "author": "Jeddy"
+      }
+    ]
+  }
+]

@@ -1,0 +1,85 @@
+<div class="content-section implementation">
+	<section class="cta-section">
+		<div class="text-center px-3 py-3">
+			<h4 class="heading">Developers Blog</h4>
+		</div>
+	</section>
+	<div class="col-md-12 p-md-5">
+		<div class="panel panel-default">
+			<div class="panel-body" *ngFor="let data of articleData">
+				<section class="post-heading">
+					<div class="row">
+						<div class="col-md-11">
+							<div class="media">
+								<div class="media-left">
+								</div>
+								<div class="media-body">
+									<a href="javascript:void(0)" class="anchor-username">
+										<h4 class="media-heading link">{{data.articleName}}</h4>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="post-body">
+					<p>{{data.description}}</p>
+				</section>
+				<section class="post-footer">
+					<hr>
+					<div class="row">
+						<div class="post-footer-option">
+							<ul class="list-unstyled">
+								<li><a href="javascript:void(0)" (click)="onLike(data.articleId)"><i class="glyphicon glyphicon-thumbs-up"></i>
+										Like ({{likeCounter(data.articleId)}})</a></li>
+								<li><a href="javascript:void(0)" (click)="onDisLike(data.articleId)"><i class="glyphicon glyphicon-share-alt"></i>
+										Dislike({{disLikeCounter(data.articleId)}})</a></li>
+								<li><a href="javascript:void(0)"><i class="glyphicon glyphicon-comment"></i>
+										Comment({{commentsCounter(data.articleId)}})</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="post-footer-comment-wrapper">
+						<div class="row">
+							<div class="comment col-md-12">
+								<div class="media comment-box" *ngFor="let comments of data.comments">
+									<div class="media-body">
+										<div class="row">
+											<div class="col-sm-10">
+												<a href="javascript:void(0)" class="anchor-username">
+													<h6 class="media-heading">{{comments.author}}</h6>
+												</a>
+											</div>
+											<div class="col-sm-2"> <a href="javascript:void(0)" class="anchor-username"
+													(click)="onDelete(comments.commentsId, data.articleId);">
+													<h6 class="media-heading">Delete</h6>
+												</a> </div>
+										</div>
+										<section class="post-body">
+											<p>{{comments.description}}</p>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="comment-form">
+							<form name="form" (ngSubmit)="f.form.valid && onSubmit(f, data.articleId)" #f="ngForm"
+								novalidate>
+								<div class="media">
+									<div class="media-body row">
+										<section class="input-group col-sm-12">
+											<input type="text" id="message" name="message" class="form-control" placeholder="Type your comments" aria-label="Type your comments" aria-describedby="basic-addon2" required ngModel>
+											<div class="input-group-append">
+												<button class="btn btn-outline-secondary" type="submit">Post</button>
+											</div>
+										</section>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="content-section implementation">
+	<section class="cta-section">
+		<div class="text-center px-3 py-3">
+			<h4 class="heading">My Activity</h4>
+		</div>
+	</section>
+
+	<div class="col-md-12 p-md-5">
+
+		<p-tabView>
+			<p-tabPanel header="Likes ({{totLikes}})">
+				<ul class="list-group">
+					<li class="list-group-item" *ngFor="let data of likesArr">{{data}}</li>
+				</ul>
+			</p-tabPanel>
+			<p-tabPanel header="Dislikes ({{totDisLikes}})">
+				<li class="list-group-item" *ngFor="let data of disLikesArr">{{data}}</li>
+			</p-tabPanel>
+			<p-tabPanel header="Comments ({{totComments}})">
+				<li class="list-group-item" *ngFor="let data of commentsArr">{{data}}</li>
+			</p-tabPanel>
+		</p-tabView>
+
+	</div>
+</div>
